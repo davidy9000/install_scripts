@@ -23,6 +23,18 @@ dnf update -y
 dnf install -y code spotify-client kdenlive vlc audacity obs-studio handbrake qbittorrent youtube-dl thunderbird redshift gimp ark steam
 dnf install -y ncurses-devel glibc-headers glibc-devel kernel-headers kernel-devel libgomp binutils dkms
 
+#Texlive
+dnf install -y texlive-scheme-full
+
+##### CUSTOMIZATION PACKAGES #####
+#Kvandum
+dnf copr enable gagbo/Kvantum
+dnf install kvantum
+
+#Icon pack
+dnf copr enable daniruiz/flat-remix
+dnf install flat-remix
+
 #Fonts
 dnf install -y mozilla-fira-mono-fonts.noarch mozilla-fira-sans-fonts.noarch
 
@@ -32,6 +44,9 @@ rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-font
 
 #My used python libraries
 #pip3 install numpy scipy folium pandas matplotlib django pymongo twisted scrapy tensorflow sympy flask opencv-contrib-python --user
+
+#Random Things
+dnf install cmatrix
 
 #rubygem package
 gem install lolcat
