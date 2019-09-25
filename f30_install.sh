@@ -20,7 +20,8 @@ dnf config-manager --add-repo=https://negativo17.org/repos/fedora-spotify.repo
 
 dnf update -y
 #Packages that I use
-dnf install -y code spotify-client kdenlive vlc audacity obs-studio handbrake qbittorrent youtube-dl thunderbird redshift gimp ark steam
+# -code: VS Code; kdenlive: Video Editor; redshift: Yellow Light Mode; ark: archive manager
+dnf install -y code spotify-client kdenlive vlc audacity obs-studio qbittorrent youtube-dl thunderbird redshift gimp ark steam
 dnf install -y ncurses-devel glibc-headers glibc-devel kernel-headers kernel-devel libgomp binutils dkms
 
 #Texlive
