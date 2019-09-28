@@ -56,3 +56,19 @@ gem install lolcat
 flatpak install flathub com.slack.Slack -y
 flatpak install flathub com.discordapp.Discord -y
 flatpak install flathub com.sublimetext.three -y
+
+#############################################################
+# Install MongoDB && Running it
+# sudo nano /etc/yum.repos.d/mongodb.repo
+# [Mongodb]
+# name=MongoDB Repository
+# baseurl=https://repo.mongodb.org/yum/amazon/2013.03/mongodb-org/4.0/x86_64/
+# gpgcheck=1
+# enabled=1
+# gpgkey=https://www.mongodb.org/static/pgp/server-4.0.asc
+
+# sudo dnf install mongodb-org
+
+# sudo systemctl enable mongod.service
+# sudo systemctl start mongod.service
+##############################################################
