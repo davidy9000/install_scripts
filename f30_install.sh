@@ -1,15 +1,18 @@
 #!/bin/bash
 
-#Run as su
+#Run with sudo
 
 dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 dnf install -y fedora-workstation-repositories rubygems
 
 dnf update -y
 
-#Some standard things
+# Some standard things
 dnf groupinstall -y "Development Tools" "Development Libraries" "C Development Tools and Libraries"
 dnf install -y nano vim wget rpm-build dnf-plugins-core flatpak neofetch gcc gcc-c++ python37 make git git-all patch fuse-exfat
+
+########################################################
+# Comment out whatever you don't want installed
 
 #VS Code Repo
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
@@ -28,13 +31,14 @@ dnf install -y ncurses-devel glibc-headers glibc-devel kernel-headers kernel-dev
 dnf install -y texlive-scheme-full
 
 ##### CUSTOMIZATION PACKAGES #####
-#Kvandum
+#Kvantum (Theming package on KDE)
 dnf copr enable gagbo/Kvantum
 dnf install kvantum
 
 #Icon pack
+# See https://drasite.com/flat-remix
 dnf copr enable daniruiz/flat-remix
-dnf install flat-remix
+dnf install flat-remix flat-remix-gtk
 
 #Fonts
 dnf install -y mozilla-fira-mono-fonts.noarch mozilla-fira-sans-fonts.noarch
@@ -59,7 +63,10 @@ flatpak install flathub com.sublimetext.three -y
 
 #############################################################
 # Install MongoDB && Running it
+# I used nano, but use your favorite editor
 # sudo nano /etc/yum.repos.d/mongodb.repo
+
+# Paste lines 69-75 into document
 # [Mongodb]
 # name=MongoDB Repository
 # baseurl=https://repo.mongodb.org/yum/amazon/2013.03/mongodb-org/4.0/x86_64/
