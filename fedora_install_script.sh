@@ -10,6 +10,7 @@ dnf update -y
 # Some standard things
 dnf groupinstall -y "Development Tools" "Development Libraries" "C Development Tools and Libraries"
 dnf install -y nano vim wget rpm-build dnf-plugins-core flatpak neofetch gcc gcc-c++ python37 make git git-all patch fuse-exfat
+dnf install -y ncurses-devel glibc-headers glibc-devel kernel-headers kernel-devel libgomp binutils dkms bpython3
 
 ########################################################
 # Comment out whatever you don't want installed
@@ -26,7 +27,6 @@ dnf update -y
 # -code: VS Code; kdenlive: Video Editor; redshift: Yellow Light Mode; ark: archive manager
 dnf install -y code spotify-client vlc qbittorrent youtube-dl thunderbird redshift gimp ark steam
 # dnf install -y kdenlive audacity obs-studio blender
-dnf install -y ncurses-devel glibc-headers glibc-devel kernel-headers kernel-devel libgomp binutils dkms bpython3
 
 #Texlive
 dnf install -y texlive-scheme-basic
@@ -61,8 +61,8 @@ gem install lolcat
 flatpak install flathub com.slack.Slack -y
 flatpak install flathub com.discordapp.Discord -y
 flatpak install flathub com.sublimetext.three -y
-flatpak install flathub org.signal.Signal -y
-flatpak install flathub com.github.junrrein.PDFSlicer
+# flatpak install flathub org.signal.Signal -y
+# flatpak install flathub com.github.junrrein.PDFSlicer -y
 
 #############################################################
 # Install MongoDB && Running it
