@@ -24,11 +24,12 @@ dnf config-manager --add-repo=https://negativo17.org/repos/fedora-spotify.repo
 dnf update -y
 #Packages that I use
 # -code: VS Code; kdenlive: Video Editor; redshift: Yellow Light Mode; ark: archive manager
-dnf install -y code spotify-client kdenlive vlc audacity obs-studio qbittorrent youtube-dl thunderbird redshift gimp ark steam
-dnf install -y ncurses-devel glibc-headers glibc-devel kernel-headers kernel-devel libgomp binutils dkms
+dnf install -y code spotify-client vlc qbittorrent youtube-dl thunderbird redshift gimp ark steam
+# dnf install -y kdenlive audacity obs-studio blender
+dnf install -y ncurses-devel glibc-headers glibc-devel kernel-headers kernel-devel libgomp binutils dkms bpython3
 
 #Texlive
-dnf install -y texlive-scheme-full
+dnf install -y texlive-scheme-basic
 
 ##### CUSTOMIZATION PACKAGES #####
 #Kvantum (Theming package on KDE)
@@ -60,13 +61,15 @@ gem install lolcat
 flatpak install flathub com.slack.Slack -y
 flatpak install flathub com.discordapp.Discord -y
 flatpak install flathub com.sublimetext.three -y
+flatpak install flathub org.signal.Signal -y
+flatpak install flathub com.github.junrrein.PDFSlicer
 
 #############################################################
 # Install MongoDB && Running it
 # I used nano, but use your favorite editor
 # sudo nano /etc/yum.repos.d/mongodb.repo
 
-# Paste lines 69-75 into document
+# Paste lines 72-78 into document above
 # [Mongodb]
 # name=MongoDB Repository
 # baseurl=https://repo.mongodb.org/yum/amazon/2013.03/mongodb-org/4.0/x86_64/
