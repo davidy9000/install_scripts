@@ -9,7 +9,7 @@ dnf update -y
 
 # Some standard things
 dnf groupinstall -y "Development Tools" "Development Libraries" "C Development Tools and Libraries"
-dnf install -y nano vim wget rpm-build dnf-plugins-core flatpak neofetch gcc gcc-c++ python37 make git git-all patch fuse-exfat
+dnf install -y nano vim wget rpm-build dnf-plugins-core flatpak neofetch gcc gcc-c++ python37 make git git-all patch fuse-exfat emacs
 dnf install -y ncurses-devel glibc-headers glibc-devel kernel-headers kernel-devel libgomp binutils dkms bpython3
 
 ########################################################
